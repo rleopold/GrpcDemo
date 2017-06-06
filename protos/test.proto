@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+message Request {
+    string Body=1;
+    string Type=2;
+}
+
+message Response {
+    string Body=1;
+    string Type=2; 
+}
+
+service TestService {
+    rpc GetTime(Request) returns (Response) {}
+    rpc SaySomething(Request) returns (Response) {}
+}
